@@ -1,0 +1,9 @@
+fastapi==0.129.2
+openai==2.21.0
+anthropic
+google-genai
+pydantic==2.12.5
+opencv-python==4.13.0.92
+numpy==2.4.2
+uvicorn==0.41.0
+websockets==16.0
