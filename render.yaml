@@ -1,0 +1,30 @@
+services:
+  # ── Backend: FastAPI on Python ────────────────────────────────
+  - type: web
+    name: mocktalk-backend
+    runtime: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn server:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: MOCKTALK_ENV
+        value: production
+      - key: ALLOWED_ORIGINS
+        # Set to your frontend Render URL, e.g. https://mocktalk-frontend.onrender.com
+        sync: false
+      - key: PYTHON_VERSION
+        value: "3.12"
+
+  # ── Frontend: Next.js on Node ─────────────────────────────────
+  - type: web
+    name: mocktalk-frontend
+    runtime: node
+    rootDir: frontend
+    buildCommand: npm ci && bash ../scripts/copy-vad-files.sh && npm run build
+    startCommand: npx next start -p $PORT
+    envVars:
+      - key: NEXT_PUBLIC_BACKEND_URL
+        # Set to your backend Render URL, e.g. https://mocktalk-backend.onrender.com
+        sync: false
+      - key: NODE_VERSION
+        value: "20"

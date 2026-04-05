@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Rosarivo:ital@0;1&display=swap');
+@import "tailwindcss";
+
+:root {
+  --background: #d6cfc4;
+  --foreground: #2d2a26;
+  --color-card: rgba(255, 255, 255, 0.55);
+  --color-card-border: rgba(168, 155, 138, 0.35);
+  --color-divider: rgba(140, 125, 105, 0.3);
+  --color-accent: #1f4d3a;
+  --color-accent-hover: #153629;
+  --font-rosarivo: 'Rosarivo', serif;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-mono: var(--font-roboto-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-roboto-mono), 'Roboto Mono', monospace;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.animate-blink {
+  animation: blink 0.8s step-end infinite;
+}
