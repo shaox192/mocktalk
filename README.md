@@ -4,7 +4,7 @@
 This is a web app for practicing academic presentations with an AI advisor that: watches your slides, listens in real time, then interrupts you mid-sentence, just like a PhD advisor would. Except this one has infinite patience and is available at 2 AM.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Deploy](https://img.shields.io/badge/Try_it_live-MockTalk-blue)](<!-- TODO: your Render URL -->)
+[![Deploy](https://img.shields.io/badge/Try_it_live-MockTalk-blue)](https://mocktalk-k3yg.onrender.com)
 
 <!-- TODO: add a demo gif/screenshot here -->
 <!-- ![MockTalk Demo](assets/demo.gif) -->
@@ -17,7 +17,7 @@ MockTalk gives you an AI advisor with infinite patience. Share your screen with 
 
 I've actually been using a crude version for my own talks for a while. But now with the help of AI coding tools, I could improve the frontend enough to deploy it as a full-stack web app and share it with fellow trainees who might find it useful.
 
-> **Backstory blog:** If you are interested, here is a [blog](<!-- TODO: link to blog post -->) on why and how I built MockTalk, and my experience with AI coding as an academic researcher.
+> **Backstory blog:** If you are interested, here is a [blog](https://shaox192.github.io/posts/2026/04/05/mocktalk/) on why and how I built MockTalk, and my experience with AI coding as an academic researcher.
 
 ## What this is (and isn't)
 
@@ -80,7 +80,7 @@ Beyond the model, the prompt matters a lot. There's a text box on the landing pa
 
 ### Online (no install)
 
-**[https://mocktalk.onrender.com](<!-- TODO: Render URL -->)**
+**[https://mocktalk-k3yg.onrender.com](https://mocktalk-k3yg.onrender.com)**
 
 Just bring your API keys. I host this on Render's free tier (I might upgrade if people are actually interested), so the service sleeps after inactivity, and the first load takes ~30–50 seconds and you'll actually see the Render information page as well as the "waking-up" process. Be patient.
 
@@ -165,12 +165,13 @@ Built with Next.js 16 + React 19 (frontend), FastAPI + Uvicorn (backend), Tailwi
 - [ ] **Screen compatibility** — Better single-screen handling.
 - [ ] **Labmate agents** — Right now it's just you and your advisor and let's just pretend the labmates have fallen asleep. I want to explore adding multiple personas (a methods person, a big-picture thinker, a skeptic) for a simulated lab meeting where everyone's actually awake (Ha!).
 
+
 ## Acknowledgement
 
 The frontend UI was built in close collaboration with [Claude Code](https://docs.anthropic.com/en/docs/claude-code),
 using the [ui-ux-pro-max](https://github.com/anthropics/claude-code-skills) skill for design and implementation.
 
 
-## License
+## Contact
 
-MIT — see [LICENSE](LICENSE).
+Feel free to reach out @<zhenans01@gmail.com>!
